@@ -1,0 +1,12 @@
+<p>dice-roll works!</p>
+<button type="button" (click)="rollDice(2)">d2</button>
+<button type="button" (click)="rollDice(4)">d4</button>
+<button type="button" (click)="rollDice(6)">d6</button>
+<p>rolled: {{lastRoll !== 0 ? lastRoll : ''}}</p>
+
+<p>Add Dice</p>
+<button type="button" (click)="addDice(2)">d2</button>
+<button type="button" (click)="addDice(4)">d4</button>
+<button type="button" (click)="addDice(6)">d6</button>
+<p *ngFor="let dice of dices">{{ dice.value !== undefined ? dice.value : dice.name }}</p>
+<button type="button" (click)="rollAllDice">roll dice</button>
